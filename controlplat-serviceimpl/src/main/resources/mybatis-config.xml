@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <setting name="lazyLoadingEnabled" value="false"/>
+        <setting name="cacheEnabled" value="false"/>
+        <setting name="multipleResultSetsEnabled" value="true"/>
+        <setting name="aggressiveLazyLoading" value="true"/>
+    </settings>
+    <typeAliases>
+        <package name="com.bizvane.controlplatservice.models"/>
+    </typeAliases>
+    <plugins>
+        <plugin interceptor="com.bizvane.utils.tenant.TenantInterceptor" />
+    </plugins>
+</configuration>

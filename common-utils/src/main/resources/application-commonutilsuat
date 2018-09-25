@@ -1,0 +1,40 @@
+spring:
+  swagger:
+    show: true
+  redis:
+    host: 192.168.2.18
+    port: 6379
+    password: bizvane
+    jedis:
+      pool:
+        max-active: 100
+        max-idle: 8
+        max-wait: 2000ms
+        min-idle: 0
+  data:
+    mongodb:
+      uri: "mongodb://192.168.2.18:27017/?AutoConnectRetry=true"
+    elasticsearch:
+      cluster-name: elasticsearch
+      cluster-nodes: 192.168.2.22:9300
+      repositories:
+        enabled: true
+  kafka:
+    producer:
+      bootstrap-servers: "192.168.2.18:9092"
+      key-serializer: "org.apache.kafka.common.serialization.StringSerializer"
+      value-serializer: "org.apache.kafka.common.serialization.StringSerializer"
+      batch-size: 16384
+      buffer-memory: 33554432
+      retries: 0
+      acks: "1"
+    consumer:
+      bootstrap-servers: "192.168.2.18:9092"
+      enable-auto-commit: false
+      auto-offset-reset: "earliest"
+      key-deserializer: "org.apache.kafka.common.serialization.StringDeserializer"
+      value-deserializer: "org.apache.kafka.common.serialization.StringDeserializer"
+#logging:
+#  config: classpath:basecontroller-local.xml
+#  level:
+#    com.bizvane.basecontroller: debug

@@ -1,0 +1,21 @@
+server:
+  port: 9999
+spring:
+  application:
+    name: adminservice-services
+  security:
+    user:
+      name: root
+      password: root
+  boot:
+    admin:
+      discovery:
+        ignored-services: adminservice-services
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+#  instance:
+#    lease-expiration-duration-in-seconds: 30
+#    lease-renewal-interval-in-seconds: 10

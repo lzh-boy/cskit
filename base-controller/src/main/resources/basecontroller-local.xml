@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false" scan="true">
+    <springProperty scope="context" name="Application_Name" source="spring.application.name"/>
+    <!--<springProperty scope="context" name="Logging_Level" source="logging.pattern.level"/>-->
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+    <contextName>globallog</contextName>
+    <property name="log.path" value="log/logback.log"/>
+    <property name="CONSOLE_LOG_PATTERN"
+              value="%date %contextName [%thread] %highlight(%-5level) %logger{36} - %msg%n"></property>
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>debug</level>
+        </filter>
+        <encoder>
+            <pattern>${CONSOLE_LOG_PATTERN}
+            </pattern>
+        </encoder>
+    </appender>
+
+    <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.path}</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log.path}.%d{yyyy-MM-dd}.zip</fileNamePattern>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${CONSOLE_LOG_PATTERN}</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="logstash"
+              class="net.logstash.logback.appender.LogstashTcpSocketAppender">
+        <destination>47.96.87.39:9601</destination>
+        <queueSize>1048576</queueSize>
+        <!-- encoder必须配置,有多种可选 -->
+        <encoder charset="UTF-8" class="net.logstash.logback.encoder.LogstashEncoder">
+            <customFields>{"appname":"${Application_Name}"}</customFields>
+        </encoder>
+        <connectionStrategy>
+            <roundRobin>
+                <connectionTTL>5 minutes</connectionTTL>
+            </roundRobin>
+        </connectionStrategy>
+    </appender>
+    <!--<root level="${Logging_Level}">-->
+        <!-- <appender-ref ref="console"/>-->
+        <!--<appender-ref ref="logstash"/>-->
+        <!--<appender-ref ref="file"/>-->
+    <!--</root>-->
+    <!--    <logger name="org.springframework.scheduling" level="error"/>
+        <Logger name="org.apache.catalina.util.LifecycleBase" level="error"/>
+        <Logger name="org.apache.coyote.http11.Http11NioProtocol" level="warn"/>
+        <Logger name="org.apache.tomcat.util.net.NioSelectorPool" level="warn"/>
+        <Logger name="org.springframework" level="debug"/>
+        <logger name="com.lzw" level="debug"/>
+        <logger name="org.mybatis" level="debug"/>
+        <logger name="java.sql" level="error"/>
+        <logger name="java.sql.Connection" level="error"/>
+        <logger name="java.sql.Statement" level="error"/>
+        <logger name="java.sql.PreparedStatement" level="error"/>
+        <logger name="java.sql.ResultSet" level="error"/>-->
+<!--    <springProfile name="dev">
+        <root level="error"><appender-ref ref="console" /></root>
+    </springProfile>-->
+    <springProfile name="local">
+        <root level="info"><appender-ref ref="file" /></root>
+    </springProfile>
+    <springProfile name="log">
+        <root level="debug"><appender-ref ref="logstash" /></root>
+    </springProfile>
+</configuration>

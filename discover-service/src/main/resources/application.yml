@@ -1,0 +1,37 @@
+server:
+  port: 8761
+
+spring:
+#  profiles:
+#    active: local
+  application:
+    name: discover-services
+#  security:
+#    enabled: false
+#    user:
+#      name: root
+#      password: root
+
+# by default every Eureka Server is also an Eureka Client and requires (at least one) services URL to locate a peer.
+eureka:
+  datacenter: bizvanedc
+  instance:
+    hostname: localhost
+#    metadata-map:
+#      user.name: ${spring.security.user.name}
+#      user.password: ${spring.security.user.password}
+  environment: dev
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 2000
+  client:
+    service-url:
+      defaultZone: http://localhost:${server.port}/eureka/
+    fetch-registry: false
+    register-with-eureka: false
+management:
+  endpoints:
+    web.exposure.include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS

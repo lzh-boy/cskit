@@ -1,0 +1,23 @@
+server:
+  port: 9999
+spring:
+  application:
+    name: adminservice-services
+  security:
+    user:
+      name: root
+      password: root
+#  boot:
+#    admin:
+#      discovery:
+#        ignored-services: adminservice-services
+management:
+  endpoints:
+    web.exposure.include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+eureka:
+  client:
+    service-url:
+      defaultZone: http://47.97.50.134:8761/eureka/

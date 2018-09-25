@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bizvane.controlplatserviceimpl.mappers.UserInfoMapper">
+    <resultMap id="UserInfo" type="com.bizvane.controlplatservice.models.UserInfo">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="user_name" property="username" jdbcType="VARCHAR"/>
+        <result column="user_addr" property="useraddr" jdbcType="VARCHAR"/>
+        <result column="user_sex" property="usersex" javaType="INT"/>
+        <result column="add_datetime" property="adddatetime" jdbcType="TIMESTAMP"/>
+    </resultMap>
+    <cache type="com.bizvane.controlplatserviceimpl.mappers.RedisCache" eviction="LRU"
+           flushInterval="3600000"
+           size="1024"
+           readOnly="false"></cache>
+    <sql id="Base_Column_List">
+        a.*
+    </sql>
+
+    <select id="getAll" resultMap="UserInfo">
+        SELECT
+            sys_store_id
+        FROM
+            t_sys_store
+        WHERE
+            sys_brand_id = #{sysBrandId}
+            AND valid = TRUE
+    </select>
+</mapper>

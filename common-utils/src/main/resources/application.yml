@@ -1,0 +1,18 @@
+spring:
+  redis:
+    host: 192.168.1.50
+    port: 6379
+    password: bizvane
+    jedis:
+      pool:
+        max-active: 100
+        max-idle: 8
+        max-wait: 2000ms
+        min-idle: 0
+  data:
+    mongodb:
+      uri: "mongodb://192.168.1.51:27017/?AutoConnectRetry=true"
+#logging:
+#  config: classpath:basecontroller-local.xml
+#  level:
+#    com.bizvane.basecontroller: debug

@@ -1,0 +1,7 @@
+spring:
+#  application:
+#    name: controlplat-basecontroller
+logging:
+  config: classpath:basecontroller-local.xml
+#  level:
+#    com.bizvane.basecontroller: debug

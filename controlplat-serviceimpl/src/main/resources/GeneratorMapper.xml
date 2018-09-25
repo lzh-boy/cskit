@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <!--指定连接数据库的JDBC驱动包所在位置，指定到你本机的完整路径需要确保本地maven仓库中是否含有此数据库驱动jar包-->
+    <classPathEntry location="C:\Users\micro\.m2\repository\mysql\mysql-connector-java\5.1.41.jar"/>
+
+    <!--配置table表信息内容体，targetRuntime指定采用mybatis3的版本-->
+    <context id="tables" targetRuntime="MyBatis3">
+        <!--抑制生成注释，由于生成的注释都是英文的，可以不让它生成-->
+        <commentGenerator>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+
+        <!--配置数据库连接信息 每次需手动修改数据库名和用户名密码-->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://bizvane-2018.mysql.polardb.rds.aliyuncs.com:3306/bizvane3?useUnicode=true"
+                        userId="bizvane_2018"
+                        password="SF_bizvane20180613">
+        </jdbcConnection>
+
+        <!--生成model类，targetPackage指定model类的包名，targetProject指定生成的model放在工程下面那个位置-->
+        <javaModelGenerator targetPackage="com.travelsky.springboot.model" targetProject="src/main/java">
+            <property name="enableSubPackages" value="false"/>
+            <property name="trimStrings" value="false"/>
+        </javaModelGenerator>
+        <!--生成mapper类，targetPackage指定mapper类的包名，targetProject指定生成的mapper放在工程下面那个位置-->
+        <sqlMapGenerator targetPackage="com.travelsky.springboot.mapper" targetProject="src/main/java">
+            <property name="enableSubPackages" value="false"/>
+
+        </sqlMapGenerator>
+        <!--生成Mybatis的Mapper.xml文件，targetPackage指定mapper类的包名,targetProject指定生成的mapper.xml放在eclipse哪个工程下面-->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.travelsky.springboot.mapper"
+                             targetProject="src/main/java">
+            <property name="enableSubpackages" value="false"/>
+        </javaClientGenerator>
+
+        <!--数据库表名以及对应的java模型类名
+        tableName：数据库中表名    domainObjectName：生成的实体类名-->
+        <table tableName="t_sys_user"
+               domainObjectName="TSysUser"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="false"/>
+    </context>
+</generatorConfiguration>

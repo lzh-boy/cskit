@@ -1,0 +1,40 @@
+server:
+  port: 2002
+
+spring:
+  swagger:
+    show: true
+  application:
+    name: controlplat-serviceimpl
+#  security:
+#    enabled: false
+#    user:
+#      name: root
+#      password: root
+  datasource:
+    url: jdbc:mysql://bizvane-2018.mysql.polardb.rds.aliyuncs.com:3306/common_platform_data?useUnicode=true&characterEncoding=utf-8
+    username: bizvane_2018
+    password: SF_bizvane20180613
+    driver-class-name: com.mysql.jdbc.Driver
+eureka:
+#  instance:
+#    metadata-map:
+#      user.name: ${spring.security.user.name}
+#      user.password: ${spring.security.user.password}
+        lease-expiration-duration-in-seconds: 30
+        lease-renewal-interval-in-seconds: 10
+  client:
+    service-url:
+      defaultZone: http://47.97.50.134:8761/eureka/
+management:
+  endpoints:
+    web.exposure.include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+mybatis:
+  config-location: classpath:mybatis-config.xml
+  mapper-locations: classpath:mybatis/*Mapper.xml
+logging:
+  level:
+    com.bizvane.userinfoservice.mapper: debug

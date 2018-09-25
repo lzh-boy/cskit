@@ -1,0 +1,77 @@
+server:
+  port: 2001
+spring:
+  swagger:
+    showinfo: true
+  profiles:
+    active: basecontroller,commonutilslocal,log
+  redis:
+    database: 0
+  application:
+    name: controlplat-serviceimpl
+#  security:
+#    enabled: false
+#    user:
+#      name: root
+#      password: root
+  datasource:
+    url: jdbc:mysql://bizvane-2018.mysql.polardb.rds.aliyuncs.com:3306/common_platform_data?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
+    username: bizvane_2018
+    password: SF_bizvane20180613
+    driver-class-name: com.mysql.jdbc.Driver
+    hikari:
+      catalog:
+  data:
+    mongodb:
+      database: "0"
+  kafka:
+    producer:
+      client-id: "kafka-etl"
+    consumer:
+       group-id: "kafka-etl"
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+tenant:
+  isEnabledTenantInterceptor: true
+eureka:
+  instance:
+    metadata-map:
+      lease-expiration-duration-in-seconds: 30
+      lease-renewal-interval-in-seconds: 10
+  client:
+    service-url:
+      defaultZone: http://47.97.50.134:8761/eureka/
+management:
+  endpoints:
+    web.exposure.include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+mybatis:
+  config-location: classpath:mybatis-config.xml
+  mapper-locations: classpath:mybatis/*Mapper.xml
+logging:
+  level:
+    root: info
+#  config: classpath:logback-local.xml
+#  level:
+#    com.bizvane.userinfoservice.mapper: debug
+xxl:
+  job:
+    admin:
+      ### xxl-job admin address list, such as "http://address" or "http://address01,http://address02"
+      addresses: http://localhost:8080
+    ### xxl-job executor address
+    executor:
+      appname: mktcenter
+      ip:
+      port: 9888
+      ### xxl-job log path
+      logpath: /data/applogs/xxl-job/jobhandler
+      ### xxl-job log retention days
+      logretentiondays: -1
+    ### xxl-job, access token
+    accessToken:
