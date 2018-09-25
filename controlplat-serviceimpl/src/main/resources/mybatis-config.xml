@@ -9,9 +9,9 @@
         <setting name="aggressiveLazyLoading" value="true"/>
     </settings>
     <typeAliases>
-        <package name="com.bizvane.controlplatservice.models"/>
+        <package name="com.cskit.controlplatservice.models"/>
     </typeAliases>
     <plugins>
-        <plugin interceptor="com.bizvane.utils.tenant.TenantInterceptor" />
+        <plugin interceptor="com.cskit.utils.tenant.TenantInterceptor" />
     </plugins>
 </configuration>

@@ -10,7 +10,7 @@
     <version>0.0.1.SNAPSHOT</version>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>base-controller</artifactId>
-    <groupId>com.bizvane</groupId>
+    <groupId>com.cskit</groupId>
     <packaging>jar</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -38,7 +38,7 @@
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.bizvane</groupId>
+            <groupId>com.cskit</groupId>
             <artifactId>common-utils</artifactId>
             <version>0.0.1.SNAPSHOT</version>
         </dependency>
@@ -60,19 +60,19 @@
     </dependencies>
     <distributionManagement>
         <repository>
-            <id>julu-release</id>
-            <url>http://repo.bizvane.com/nexus/content/repositories/julu-release</url>
+            <id>cskit-release</id>
+            <url>http://repo.cskit.com/nexus/content/repositories/cskit-release</url>
         </repository>
         <snapshotRepository>
             <id>snapshots</id>
-            <url>http://repo.bizvane.com/nexus/content/repositories/snapshots</url>
+            <url>http://repo.cskit.com/nexus/content/repositories/snapshots</url>
         </snapshotRepository>
     </distributionManagement>
     <repositories>
         <repository>
-            <id>julu</id>
-            <name>julu</name>
-            <url>http://repo.bizvane.com/nexus/content/groups/julu</url>
+            <id>cskit</id>
+            <name>cskit</name>
+            <url>http://repo.cskit.com/nexus/content/groups/cskit</url>
         </repository>
     </repositories>
 </project>

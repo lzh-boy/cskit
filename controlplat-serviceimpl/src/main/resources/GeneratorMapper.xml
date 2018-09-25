@@ -15,9 +15,9 @@
 
         <!--配置数据库连接信息 每次需手动修改数据库名和用户名密码-->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://bizvane-2018.mysql.polardb.rds.aliyuncs.com:3306/bizvane3?useUnicode=true"
-                        userId="bizvane_2018"
-                        password="SF_bizvane20180613">
+                        connectionURL="jdbc:mysql://cskit-2018.mysql.polardb.rds.aliyuncs.com:3306/cskit3?useUnicode=true"
+                        userId="cskit_2018"
+                        password="SF_cskit20180613">
         </jdbcConnection>
 
         <!--生成model类，targetPackage指定model类的包名，targetProject指定生成的model放在工程下面那个位置-->

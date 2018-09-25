@@ -12,9 +12,9 @@ spring:
 #      name: root
 #      password: root
   datasource:
-    url: jdbc:mysql://bizvane-2018.mysql.polardb.rds.aliyuncs.com:3306/common_platform_data?useUnicode=true&characterEncoding=utf-8
-    username: bizvane_2018
-    password: SF_bizvane20180613
+    url: jdbc:mysql://cskit-2018.mysql.polardb.rds.aliyuncs.com:3306/common_platform_data?useUnicode=true&characterEncoding=utf-8
+    username: cskit_2018
+    password: SF_cskit20180613
     driver-class-name: com.mysql.jdbc.Driver
 eureka:
   instance:
@@ -37,4 +37,4 @@ mybatis:
   mapper-locations: classpath:mybatis/*Mapper.xml
 logging:
   level:
-    com.bizvane.userinfoservice.mapper: debug
+    com.cskit.userinfoservice.mapper: debug

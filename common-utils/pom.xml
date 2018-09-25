@@ -139,8 +139,8 @@
     </dependencies>
     <distributionManagement>
         <repository>
-            <id>julu-release</id>
-            <url>http://repo.bizvane.com/nexus/content/repositories/julu-release</url>
+            <id>cskit-release</id>
+            <url>http://repo.bizvane.com/nexus/content/repositories/cskit-release</url>
         </repository>
         <snapshotRepository>
             <id>snapshots</id>
@@ -149,9 +149,9 @@
     </distributionManagement>
     <repositories>
         <repository>
-            <id>julu</id>
-            <name>julu</name>
-            <url>http://repo.bizvane.com/nexus/content/groups/julu</url>
+            <id>cskit</id>
+            <name>cskit</name>
+            <url>http://repo.bizvane.com/nexus/content/groups/cskit</url>
         </repository>
     </repositories>
 </project>

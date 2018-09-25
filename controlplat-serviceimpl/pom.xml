@@ -77,7 +77,7 @@
             <version>RELEASE</version>
         </dependency>
         <dependency>
-            <groupId>com.bizvane</groupId>
+            <groupId>com.cskit</groupId>
             <artifactId>controlplat-service</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
@@ -101,12 +101,12 @@
             <optional>true</optional>
         </dependency>
         <dependency>
-            <groupId>com.bizvane</groupId>
+            <groupId>com.cskit</groupId>
             <artifactId>base-controller</artifactId>
             <version>0.0.1.SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>com.bizvane</groupId>
+            <groupId>com.cskit</groupId>
             <artifactId>common-utils</artifactId>
             <version>0.0.1.SNAPSHOT</version>
         </dependency>
@@ -183,9 +183,9 @@
     </build>
     <repositories>
         <repository>
-            <id>julu</id>
-            <name>julu</name>
-            <url>http://repo.bizvane.com/nexus/content/groups/julu/</url>
+            <id>cskit</id>
+            <name>cskit</name>
+            <url>http://repo.cskit.com/nexus/content/groups/cskit/</url>
         </repository>
     </repositories>
 </project>

@@ -1,3 +1,3 @@
-# spring-boot-admin-eureka-finchley
+# 微服务基础框架
 
-spring boot admin configuration with eureka using spring cloud finchley
+* cskit（cloud stack kit） 为一套微服务基础框架，主要基于Spring Boot、Spring Cloud技术栈，致力于打造一套为想实践微服务而开箱即用的基础框架，整体架构设计图如下

@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.bizvane</groupId>
+	<groupId>com.cskit</groupId>
 	<artifactId>admin-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
@@ -88,9 +88,9 @@
 	</build>
 	<repositories>
 		<repository>
-			<id>julu</id>
-			<name>julu</name>
-			<url>http://repo.bizvane.com/nexus/content/groups/julu</url>
+			<id>cskit</id>
+			<name>cskit</name>
+			<url>http://repo.cskit.com/nexus/content/groups/cskit</url>
 		</repository>
 		<repository>
 			<id>spring-milestones</id>

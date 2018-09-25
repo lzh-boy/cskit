@@ -4,4 +4,4 @@ spring:
 logging:
   config: classpath:basecontroller-local.xml
 #  level:
-#    com.bizvane.basecontroller: debug
+#    com.cskit.basecontroller: debug
