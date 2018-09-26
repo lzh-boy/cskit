@@ -1,4 +1,4 @@
-package com.bizvane.controlplatserviceimpl.mongo;
+package com.cskit.controlplatserviceimpl.mongo;
 
 import com.bizvane.controlplatservice.models.UserInfo;
 import com.bizvane.utils.mongoutils.MongoTemplateService;

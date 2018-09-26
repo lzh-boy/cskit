@@ -1,4 +1,4 @@
-package com.bizvane.controlplatserviceimpl.es;
+package com.cskit.controlplatserviceimpl.es;
 
 import com.bizvane.controlplatservice.models.CtrlAccountModel;
 import com.bizvane.controlplatservice.models.UserInfo;

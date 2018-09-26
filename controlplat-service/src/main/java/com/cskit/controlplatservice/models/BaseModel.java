@@ -1,4 +1,4 @@
-package com.bizvane.controlplatservice.models;
+package com.cskit.controlplatservice.models;
 
 import java.io.Serializable;
 import lombok.Data;
