@@ -19,5 +19,9 @@
     * Kafka
     * Rabbitmq
     * Elasticsearch
- * 部署涉及到的组件
+    
+ * CI/DI涉及到的组件
+    * Git&Git Ci/Di
+    * Jenkins
     * Docker
+    * Swarm&Kubernetes 
