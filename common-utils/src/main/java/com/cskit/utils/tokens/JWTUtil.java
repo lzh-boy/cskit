@@ -16,8 +16,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @Author: lijunwei
- * @Time: 2018/7/12 8:58
+ * @author Micro
+ * @Title: jwt工具
+ * @Package com.cskit.utils.tokens
+ * @Description: ${todo}
+ * @date 2018/8/9 10:24
  */
 public class JWTUtil {
 

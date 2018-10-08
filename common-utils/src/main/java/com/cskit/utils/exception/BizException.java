@@ -4,10 +4,10 @@ import com.cskit.utils.enumutils.SysResponseEnum;
 
 import java.util.logging.Level;
 
-/*
+/**
  * @author Micro
  * @Title: 业务异常
- * @Package ${package_name}
+ * @Package com.cskit.utils.exception
  * @Description: 如果是SEVERE，表示严重错误
  * @date 2018/6/26 20:01
  */

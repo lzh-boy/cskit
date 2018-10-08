@@ -4,7 +4,7 @@ import java.util.Random;
 
 /**
  * @author Micro
- * @Title: Cookie操作
+ * @Title: 随机码生成
  * @Package ${package_name}
  * @Description: ${todo}
  * @date 2018/6/19 19:12
@@ -27,21 +27,19 @@ public class RandomNumber {
         return fixLenthString.substring(1, strLength + 1);
     }
 
-    public static String suiJi_Letter() {
-        char suiJi = '1';
-        char[] ziMu = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
+    public static String getRandomLetter() {
+        char[] letters = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
                 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
-        boolean[] flag = new boolean[ziMu.length];
+        boolean[] flag = new boolean[letters.length];
         String ReturnInfo = "";
-        for (int i = 0; i < ziMu.length; i++) {
-            int s;
-            char r;
+        int s;
+        char r;
+        for (int i = 0; i < letters.length; i++) {
             do {
-                r = ziMu[0];
-                s = (int) (Math.random() * ziMu.length);
+                r = letters[0];
+                s = (int) (Math.random() * letters.length);
             } while (flag[s]);
-            suiJi = ziMu[s];
-            ReturnInfo = String.valueOf(suiJi) + String.valueOf(r);
+            ReturnInfo = String.valueOf(letters[s]) + String.valueOf(r);
             flag[s] = true;
         }
         return ReturnInfo;

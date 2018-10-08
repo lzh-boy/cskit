@@ -2,11 +2,10 @@ package com.cskit.utils.constants;
 
 
 /**
- * @author chen.li
+ * @author micro
  * @version 1.0
  * @date on 2018/6/21 10:30
  * @description 系统常量类，此处为系统级别常量定义，非系统级别请自己新增业务常量类
- * @Copyright (c) 2018 上海商帆信息科技有限公司-版权所有
  */
 public class SysConstants {
     //无效

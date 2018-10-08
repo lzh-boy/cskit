@@ -10,8 +10,8 @@ import java.util.List;
 
 /**
  * @author Micro
- * @Title: Cookie操作
- * @Package ${package_name}
+ * @Title: 分页返回
+ * @Package com.cskit.utils.responseinfo
  * @Description: ${todo}
  * @date 2018/6/19 19:12
  */
@@ -34,7 +34,6 @@ public class PageInfo<T> implements Serializable {
     private long total = 0;
     private int pages = 0;
     private int size = 0;
-//    private Integer pageNumber = 1;
 
     public PageInfo() {
     }
@@ -121,12 +120,4 @@ public class PageInfo<T> implements Serializable {
     public void setTotal(long total) {
         this.total = total;
     }
-
-/*    public Integer getPageNumber() {
-        return pageNumber;
-    }
-
-    public void setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-    }*/
 }

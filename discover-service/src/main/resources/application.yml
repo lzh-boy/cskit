@@ -9,7 +9,7 @@ spring:
 #      password: root
 # by default every Eureka Server is also an Eureka Client and requires (at least one) services URL to locate a peer.
 eureka:
-  datacenter: bizvanedc
+  datacenter: cskitdc
   instance:
     hostname: localhost
   environment: dev

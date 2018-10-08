@@ -1,10 +1,9 @@
 package com.cskit.utils.jobutils;
 
 /**
- * @author chen.li
+ * @author micro
  * @date on 2018/7/14 13:35
  * @description
- * @Copyright (c) 2018 上海商帆信息科技有限公司-版权所有
  */
 public enum JobBusinessTypeEnum {
 

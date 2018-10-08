@@ -1,20 +1,19 @@
 package com.cskit.utils.commonutils;
 
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.security.MessageDigest;
+import sun.misc.BASE64Decoder;
+import sun.misc.BASE64Encoder;
 
 import javax.crypto.Cipher;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
-
-import sun.misc.BASE64Decoder;
-import sun.misc.BASE64Encoder;
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.security.MessageDigest;
 
 /**
  * @author Micro
- * @Title: Cookie操作
- * @Package ${package_name}
+ * @Title: 加密解密
+ * @Package com.cskit.utils.commonutils
  * @Description: ${todo}
  * @date 2018/6/19 19:12
  */

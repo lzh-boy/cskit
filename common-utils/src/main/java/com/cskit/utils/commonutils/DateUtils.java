@@ -12,9 +12,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * 日期处理工具类
- *
- * @author 董争光 2018年5月21日下午1:47:48
+ * @author Micro
+ * @Title: 日期处理工具类
+ * @Package com.cskit.utils.commonutils
+ * @Description: null
+ * @date 2018/6/26 20:01
  */
 public class DateUtils implements Serializable {
 
@@ -69,7 +71,7 @@ public class DateUtils implements Serializable {
      * 计算两个日期之间相差的天数
      *
      * @param smdate 较小的时间
-     * @param bdate 较大的时间
+     * @param bdate  较大的时间
      * @return 相差天数
      * @throws ParseException
      */
@@ -212,7 +214,8 @@ public class DateUtils implements Serializable {
      * 计算两个日期之间的天数
      *
      * @param fDate
-     * @param oDate
+     * @param fDate
+     * @param lDate
      * @return
      */
     public static int daysOfTwoCount(Date fDate, Date lDate) {
@@ -310,7 +313,7 @@ public class DateUtils implements Serializable {
     public static Date getFormateStringDate(String str) {
         Date date = null;
         try {
-            date = org.apache.commons.lang3.time.DateUtils.parseDate(str, new String[] {"yyyy-MM-dd"});
+            date = org.apache.commons.lang3.time.DateUtils.parseDate(str, new String[]{"yyyy-MM-dd"});
         } catch (ParseException e) {
             e.printStackTrace();
         }

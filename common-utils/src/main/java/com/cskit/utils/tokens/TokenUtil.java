@@ -18,11 +18,14 @@ import com.google.gson.JsonSyntaxException;
 import io.jsonwebtoken.Claims;
 
 /**
- * @Author: lijunwei
- * @Time: 2018/7/12 9:04
+ * @author Micro
+ * @Title: Token工具
+ * @Package com.cskit.utils.tokens
+ * @Description: ${todo}
+ * @date 2018/8/9 10:24
  */
-public class TokenUtils {
-    public static final Logger logger= LoggerFactory.getLogger(TokenUtils.class);
+public class TokenUtil {
+    public static final Logger logger= LoggerFactory.getLogger(TokenUtil.class);
     public  final   static  String CONTROL_TOKEN= "controlToken";
     public  final   static  String STAGE_TOKEN= "stageToken";
 

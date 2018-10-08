@@ -7,10 +7,9 @@ import java.lang.reflect.Field;
 import java.util.Collections;
 
 /**
- * @author chen.li
+ * @author micro
  * @date on 2018/7/12 19:01
  * @description map工具类
- * @Copyright (c) 2018 上海商帆信息科技有限公司-版权所有
  */
 public class MapUtil {
 

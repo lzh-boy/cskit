@@ -17,12 +17,6 @@
     </sql>
 
     <select id="getAll" resultMap="UserInfo">
-        SELECT
-            sys_store_id
-        FROM
-            t_sys_store
-        WHERE
-            sys_brand_id = #{sysBrandId}
-            AND valid = TRUE
+       select * from user_info
     </select>
 </mapper>

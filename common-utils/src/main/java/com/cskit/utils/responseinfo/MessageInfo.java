@@ -5,12 +5,11 @@ import io.swagger.annotations.ApiModelProperty;
 
 /**
  * @author Micro
- * @Title: Cookie操作
- * @Package ${package_name}
+ * @Title: 提示信息
+ * @Package com.cskit.utils.responseinfo
  * @Description: ${todo}
  * @date 2018/6/19 19:12
  */
-@Deprecated
 @ApiModel(value = "提示消息结构")
 public class MessageInfo {
 

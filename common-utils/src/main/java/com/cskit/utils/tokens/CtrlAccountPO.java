@@ -3,7 +3,11 @@ package com.cskit.utils.tokens;
 import java.util.Date;
 
 /**
- * @author liufq
+ * @author Micro
+ * @Title: 账号PO
+ * @Package com.cskit.utils.tokens
+ * @Description: ${todo}
+ * @date 2018/8/9 10:24
  */
 public class CtrlAccountPO {
     @io.swagger.annotations.ApiModelProperty(value = "pkid",name = "ctrlAccountId")

@@ -30,12 +30,5 @@ public class ControlPlatServiceImplApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(ControlPlatServiceImplApplication.class, args);
-
-        /*ApplicationContext applicationContext =
-                new AnnotationConfigApplicationContext(ControlPlatServiceImplApplication.class);
-        String[] beanDefinitionNames = applicationContext.getBeanDefinitionNames();
-        for (String beanName : beanDefinitionNames) {
-            System.out.println("beanName: " + beanName);
-        }*/
     }
 }

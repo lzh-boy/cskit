@@ -9,7 +9,7 @@ import java.io.Serializable;
 /**
  * @author Micro
  * @Title: 返回信息基类
- * @Package ${package_name}
+ * @Package com.cskit.utils.responseinfo
  * @Description: ${todo}
  * @date 2018/6/19 19:12
  */
