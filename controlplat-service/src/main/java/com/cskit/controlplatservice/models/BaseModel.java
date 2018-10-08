@@ -9,7 +9,7 @@ import java.util.Date;
 /**
  * @author Micro
  * @Title: Model 基类
- * @Package com.bizvane.controlplatservice.models
+ * @Package com.cskit.controlplatservice.models
  * @Description: 模型共用属性
  * @date 2018/7/20 20:20
  */

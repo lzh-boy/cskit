@@ -13,10 +13,9 @@ import org.springframework.web.client.RestTemplate;
 import java.util.Random;
 
 /**
- * @author chen.li
+ * @author micro
  * @date on 2018/7/12 17:44
  * @description
- * @Copyright (c) 2018 上海商帆信息科技有限公司-版权所有
  */
 @Component
 public class JobClient {

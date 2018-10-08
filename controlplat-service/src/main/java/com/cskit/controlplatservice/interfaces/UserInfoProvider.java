@@ -12,8 +12,8 @@ import java.util.List;
 
 /**
  * @author Micro
- * @Title: ${file_name}
- * @Package ${package_name}
+ * @Title: 测试接口
+ * @Package com.cskit.controlplatservice.interfaces
  * @Description: ${todo}
  * @date 2018/6/19 19:12
  */

@@ -1,11 +1,10 @@
 package com.cskit.utils.enumutils;
 
 /**
- * @author chen.li
+ * @author micro
  * @date on 2018/6/21 10:30
  * @description 系统响应返回码枚举类，此处定义所有该系统对外响应的返回码及释义
  * @version 1.0
- * @Copyright (c) 2018 上海商帆信息科技有限公司-版权所有
  */
 public enum SysResponseEnum {
     SUCCESS(0, "操作成功！"),

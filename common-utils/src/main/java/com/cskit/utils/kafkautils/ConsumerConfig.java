@@ -10,7 +10,7 @@ import java.time.Duration;
 /**
  * @author Micro
  * @Title: ${file_name}
- * @Package ${package_name}
+ * @Package com.cskit.utils.kafkautils
  * @Description: ${todo}
  * @date 2018/8/9 10:24
  */

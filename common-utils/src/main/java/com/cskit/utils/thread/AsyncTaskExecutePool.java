@@ -14,7 +14,11 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
 
 /**
- * 注意：该线程池被所有的异步任务共享，而不属于某一个异步任务 描述：配置异步任务的线程池
+ * @author Micro
+ * @Title: 注意：该线程池被所有的异步任务共享，而不属于某一个异步任务 描述：配置异步任务的线程池
+ * @Package com.cskit.utils.thread
+ * @Description: ${todo}
+ * @date 2018/8/9 10:24
  */
 @Configuration
 public class AsyncTaskExecutePool implements AsyncConfigurer {

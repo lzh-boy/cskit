@@ -1,4 +1,4 @@
-package com.cskit.autuconfig.traceController;
+package com.cskit.utils.traceController;
 
 import java.util.regex.Pattern;
 
@@ -18,10 +18,11 @@ import com.alibaba.fastjson.JSON;
 import com.google.common.base.Stopwatch;
 
 /**
- * 
- * @author wang.zeyan
- * @date 2018年9月3日
- *
+ * @author Micro
+ * @Title: ${file_name}
+ * @Package com.cskit.utils.kafkautils
+ * @Description: ${todo}
+ * @date 2018/8/9 10:24
  */
 @Aspect
 public class TraceControllerAspect implements Ordered {

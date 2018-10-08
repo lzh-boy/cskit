@@ -3,6 +3,13 @@ package com.cskit.utils.thread;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
+/**
+ * @author Micro
+ * @Title: 线程池配置信息
+ * @Package com.cskit.utils.thread
+ * @Description: ${todo}
+ * @date 2018/8/9 10:24
+ */
 @ConfigurationProperties(prefix = "thread.pool")
 @Component
 public class ThreadConfig {

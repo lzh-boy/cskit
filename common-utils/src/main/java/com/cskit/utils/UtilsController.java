@@ -8,12 +8,12 @@ import sun.java2d.pipe.AAShapePipe;
 
 /**
  * @author Micro
- * @Title: ${file_name}
- * @Package com.bizvane.utils
+ * @Title: com.cskit.utils
+ * @Package com.cskit.utils
  * @Description: ${todo}
  * @date 2018/6/27 20:30
  */
-@ComponentScan(value = "com.bizvane.utils")
+@ComponentScan(value = "com.cskit.utils")
 public class UtilsController {
     /**
      * 　　* @Description: ${todo}

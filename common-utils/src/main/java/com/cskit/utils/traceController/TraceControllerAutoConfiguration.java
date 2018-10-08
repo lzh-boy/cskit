@@ -1,4 +1,4 @@
-package com.cskit.autuconfig.traceController;
+package com.cskit.utils.traceController;
 
 import java.util.regex.Pattern;
 
@@ -12,12 +12,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.core.env.Environment;
 
 /**
- * <p>
- * 自动配置 跟踪controller调用信息
- * </p>
- * @author wang.zeyan
- * @date 2018年9月3日
- *
+ * @author Micro
+ * @Title: 自动配置 跟踪controller调用信息
+ * @Package com.cskit.utils.tokens
+ * @Description: ${todo}
+ * @date 2018/8/9 10:24
  */
 @Configurable
 @ConditionalOnWebApplication

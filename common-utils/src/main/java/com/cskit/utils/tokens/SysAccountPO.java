@@ -3,6 +3,13 @@ package com.cskit.utils.tokens;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * @author Micro
+ * @Title: 系统账号PO
+ * @Package com.cskit.utils.tokens
+ * @Description: ${todo}
+ * @date 2018/8/9 10:24
+ */
 public class SysAccountPO {
   
     /**

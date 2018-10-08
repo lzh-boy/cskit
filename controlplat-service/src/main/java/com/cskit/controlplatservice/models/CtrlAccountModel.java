@@ -12,7 +12,7 @@ import java.util.Date;
 /**
  * @author Micro
  * @Title: 会员模型
- * @Package com.bizvane.controlplatservice.models
+ * @Package com.cskit.controlplatservice.models
  * @Description: 会员级别新币表
  * @date 2018/7/23 10:42
  */

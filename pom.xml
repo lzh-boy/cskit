@@ -2,7 +2,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <groupId>com.cskit</groupId>
     <artifactId>cloud-stack-kit</artifactId>
     <version>0.0.1-SNAPSHOT</version>
@@ -10,6 +9,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+        <spring-cloud.version>Finchley.SR1</spring-cloud.version>
     </properties>
     <packaging>pom</packaging>
     <parent>
@@ -30,10 +30,10 @@
         </dependencies>
     </dependencyManagement>
     <modules>
-        <!--        <module>bar-service</module>
-                <module>foo-service</module>
-                <module>eureka-server</module>
-                <module>spring-boot-admin</module>-->
+                <module>common-utils</module>
+                <module>base-controller</module>
+                <module>controlplat-service</module>
+                <module>controlplat-serviceimpl</module>
     </modules>
 
 </project>

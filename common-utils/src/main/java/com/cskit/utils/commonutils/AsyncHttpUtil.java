@@ -14,6 +14,7 @@ import org.apache.http.concurrent.FutureCallback;
 import org.apache.http.config.Registry;
 import org.apache.http.config.RegistryBuilder;
 import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.conn.SystemDefaultDnsResolver;
 import org.apache.http.impl.nio.client.CloseableHttpAsyncClient;
 import org.apache.http.impl.nio.client.HttpAsyncClients;
 import org.apache.http.impl.nio.conn.PoolingNHttpClientConnectionManager;
@@ -41,8 +42,11 @@ import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 
 /**
- *
- * @author 董争光 2018年5月21日下午1:46:24
+ * @author Micro
+ * @Title: Http异步请求
+ * @Package com.cskit.utils.commonutils
+ * @Description: null
+ * @date 2018/6/26 20:01
  */
 public class AsyncHttpUtil {
     private static final Logger logger = LoggerFactory.getLogger(AsyncHttpUtil.class);
@@ -64,7 +68,7 @@ public class AsyncHttpUtil {
                     .setConnectTimeout(AsyncHttpUtil.MAX_TIMEOUT).setSoTimeout(AsyncHttpUtil.MAX_TIMEOUT).build();
             AsyncHttpUtil.ioReactor = new DefaultConnectingIOReactor(config);
             AsyncHttpUtil.connMgr =
-                    new PoolingNHttpClientConnectionManager(AsyncHttpUtil.ioReactor, null, sessionStrategyRegistry, null);
+                    new PoolingNHttpClientConnectionManager(AsyncHttpUtil.ioReactor, null, sessionStrategyRegistry, new SystemDefaultDnsResolver());
             AsyncHttpUtil.connMgr.setMaxTotal(AsyncHttpUtil.MAX_POOL_COUNT);
             AsyncHttpUtil.connMgr.setDefaultMaxPerRoute(AsyncHttpUtil.connMgr.getMaxTotal());
             AsyncHttpUtil.httpClient = HttpAsyncClients.custom().setConnectionManager(AsyncHttpUtil.connMgr).build();

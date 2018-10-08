@@ -2,15 +2,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.bizvane</groupId>
+    <groupId>com.cskit</groupId>
     <artifactId>common-utils</artifactId>
     <version>0.0.1.SNAPSHOT</version>
     <packaging>jar</packaging>
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.1.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repositories -->
+        <groupId>com.cskit</groupId>
+        <artifactId>cloud-stack-kit</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
     </parent>
     <name>common-utils</name>
     <description>common-utils service</description>
@@ -94,7 +93,6 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
-            <version>5.0.5.RELEASE</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
@@ -110,24 +108,6 @@
             <version>3.6</version>
         </dependency>
         <dependency>
-            <groupId>org.apache.kafka</groupId>
-            <artifactId>kafka-clients</artifactId>
-            <version>0.9.0.2.4.0.1-6</version>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.kafka</groupId>
-            <artifactId>kafka_2.11</artifactId>
-            <version>0.9.0.2.4.0.1-6</version>
-            <exclusions>
-                <exclusion>
-                    <artifactId>scala-parser-combinators_2.11</artifactId>
-                    <groupId>org.scala-lang.modules</groupId>
-                </exclusion>
-            </exclusions>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>
         </dependency>
@@ -136,22 +116,29 @@
             <artifactId>fastjson</artifactId>
             <version>1.2.47</version>
         </dependency>
+        <!-- kafka start -->
+        <dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
+            <version>2.1.10.RELEASE</version>
+        </dependency>
+        <!-- kafka end -->
     </dependencies>
     <distributionManagement>
         <repository>
             <id>cskit-release</id>
-            <url>http://repo.bizvane.com/nexus/content/repositories/cskit-release</url>
+            <url>http://repo.cskit.com/nexus/content/repositories/cskit-release</url>
         </repository>
         <snapshotRepository>
             <id>snapshots</id>
-            <url>http://repo.bizvane.com/nexus/content/repositories/snapshots</url>
+            <url>http://repo.cskit.com/nexus/content/repositories/snapshots</url>
         </snapshotRepository>
     </distributionManagement>
-    <repositories>
+<!--    <repositories>
         <repository>
             <id>cskit</id>
             <name>cskit</name>
-            <url>http://repo.bizvane.com/nexus/content/groups/cskit</url>
+            <url>http://repo.cskit.com/nexus/content/groups/cskit</url>
         </repository>
-    </repositories>
+    </repositories>-->
 </project>

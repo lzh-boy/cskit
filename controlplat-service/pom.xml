@@ -3,15 +3,14 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.1.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repositories -->
+        <groupId>com.cskit</groupId>
+        <artifactId>cloud-stack-kit</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
     </parent>
     <version>0.0.1-SNAPSHOT</version>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>controlplat-service</artifactId>
-    <groupId>com.bizvane</groupId>
+    <groupId>com.cskit</groupId>
     <dependencies>
         <dependency>
             <groupId>io.springfox</groupId>
@@ -28,7 +27,7 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.bizvane</groupId>
+            <groupId>com.cskit</groupId>
             <artifactId>common-utils</artifactId>
             <version>0.0.1.SNAPSHOT</version>
         </dependency>
@@ -52,7 +51,7 @@
         <repository>
             <id>cskit</id>
             <name>cskit</name>
-            <url>http://repo.bizvane.com/nexus/content/groups/cskit/</url>
+            <url>http://repo.cskit.com/nexus/content/groups/cskit/</url>
         </repository>
     </repositories>
 </project>

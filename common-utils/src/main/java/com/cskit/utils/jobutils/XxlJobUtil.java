@@ -8,10 +8,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * @author chen.li
+ * @author micro
  * @date on 2018/7/12 17:44
  * @description
- * @Copyright (c) 2018 上海商帆信息科技有限公司-版权所有
  */
 @Component
 public class XxlJobUtil {

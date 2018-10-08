@@ -2,20 +2,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.1.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repositories -->
+        <groupId>com.cskit</groupId>
+        <artifactId>cloud-stack-kit</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
     </parent>
     <version>0.0.1-SNAPSHOT</version>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>controlplat-serviceimpl</artifactId>
+    <groupId>com.cskit</groupId>
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>1.8</java.version>
-        <spring-cloud.version>Finchley.RC1</spring-cloud.version>
-
     </properties>
 
     <dependencies>
@@ -36,13 +31,9 @@
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
-		<dependency>
-		    <groupId>org.springframework.boot</groupId>
-		    <artifactId>spring-boot-starter-aop</artifactId>
-		</dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -51,6 +42,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.12</version>
         </dependency>
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
@@ -60,7 +52,7 @@
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-autoconfigure</artifactId>
-            <version>1.1.1</version>
+            <version>1.3.2</version>
         </dependency>
         <dependency>
             <groupId>io.springfox</groupId>
@@ -135,34 +127,24 @@
             <version>1.9.3</version>
         </dependency>
         <dependency>
-            <groupId>org.apache.kafka</groupId>
-            <artifactId>kafka-clients</artifactId>
-            <version>0.9.0.2.4.0.1-6</version>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.apache.kafka</groupId>
-            <artifactId>kafka_2.11</artifactId>
-            <version>0.9.0.2.4.0.1-6</version>
-            <exclusions>
-                <exclusion>
-                    <artifactId>scala-parser-combinators_2.11</artifactId>
-                    <groupId>org.scala-lang.modules</groupId>
-                </exclusion>
-            </exclusions>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-commons</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>1.1.10</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+            <optional>true</optional>
         </dependency>
     </dependencies>
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-
     <build>
         <plugins>
             <plugin>
@@ -181,11 +163,11 @@
             </plugin>
         </plugins>
     </build>
-    <repositories>
+   <!-- <repositories>
         <repository>
             <id>cskit</id>
             <name>cskit</name>
             <url>http://repo.cskit.com/nexus/content/groups/cskit/</url>
         </repository>
-    </repositories>
+    </repositories>-->
 </project>

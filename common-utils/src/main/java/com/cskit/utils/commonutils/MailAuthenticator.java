@@ -4,18 +4,11 @@ import javax.mail.Authenticator;
 import javax.mail.PasswordAuthentication;
 
 /**
- * ***************************************************************************
- * 模块名 :
- * 文件名 :
- * 创建时间 : 2016/11/21
- * 实现功能 :
- * 作者 : zb
- * 版本 : v0.0.1
- * -----------------------------------------------------------------------------
- * 修改记录:
- * 日 期                版本     修改人      修改内容
- * 2016/11/21             v0.0.1     Micro        创建
- * ***************************************************************************
+ * @author Micro
+ * @Title: null
+ * @Package com.cskit.utils.commonutils
+ * @Description: null
+ * @date 2018/6/26 20:01
  */
 public class MailAuthenticator extends Authenticator {
 
