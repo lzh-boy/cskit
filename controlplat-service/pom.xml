@@ -41,11 +41,11 @@
             <artifactId>persistence-api</artifactId>
             <version>1.0.2</version>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-elasticsearch</artifactId>
             <version>2.1.1.RELEASE</version>
-        </dependency>
+        </dependency>-->
     </dependencies>
     <repositories>
         <repository>

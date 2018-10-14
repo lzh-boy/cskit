@@ -1,6 +1,6 @@
 package com.cskit.controlplatservice.interfaces;
 
-import com.cskit.controlplatservice.models.CtrlAccountModel;
+//import com.cskit.controlplatservice.models.CtrlAccountModel;
 import com.cskit.controlplatservice.models.UserInfo;
 import com.cskit.utils.responseinfo.PageInfo;
 import com.cskit.utils.responseinfo.ResponseData;
@@ -68,13 +68,13 @@ public interface UserInfoProvider {
     @GetMapping("/getuserinfobypage")
     ResponseData<PageInfo<UserInfo>> getUserInfoByPage(@RequestParam(value = "pageno", defaultValue = "1", required = false) int pageno, @RequestParam(value = "pagesize", defaultValue = "5") int pagesize);
 
-    @ApiOperation(value = "ES获取单个信息", notes = "ES获取单个信息", tags = {"ElasticSearch"})
-    @GetMapping("/getaccountfromes")
-    ResponseData<CtrlAccountModel> getAccountFromES(@RequestParam(value = "ctrlaccountid", defaultValue = "7", required = true) Long ctrlaccountid);
+//    @ApiOperation(value = "ES获取单个信息", notes = "ES获取单个信息", tags = {"ElasticSearch"})
+//    @GetMapping("/getaccountfromes")
+//    ResponseData<CtrlAccountModel> getAccountFromES(@RequestParam(value = "ctrlaccountid", defaultValue = "7", required = true) Long ctrlaccountid);
 
-    @ApiOperation(value = "获取ES分页数据", notes = "演示ES分页示例", tags = {"ElasticSearch"})
-    @GetMapping("/getpageaccountfromes")
-    PageInfo<CtrlAccountModel> getPageAccountFromES(@RequestParam(value = "pagenum", defaultValue = "0") int pagenum, @RequestParam(value = "pagesize", defaultValue = "2")  int pagesize);
+//    @ApiOperation(value = "获取ES分页数据", notes = "演示ES分页示例", tags = {"ElasticSearch"})
+//    @GetMapping("/getpageaccountfromes")
+//    PageInfo<CtrlAccountModel> getPageAccountFromES(@RequestParam(value = "pagenum", defaultValue = "0") int pagenum, @RequestParam(value = "pagesize", defaultValue = "2")  int pagesize);
 
     @ApiOperation(value = "接收内容", notes = "接收内容", tags = {"kafka"})
     @GetMapping("/kafkareceive")

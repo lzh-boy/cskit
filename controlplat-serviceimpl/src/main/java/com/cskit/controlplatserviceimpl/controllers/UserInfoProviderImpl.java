@@ -9,13 +9,13 @@ import java.util.logging.Level;
 
 import com.cskit.basecontroller.BaseController;
 import com.cskit.controlplatservice.interfaces.UserInfoProvider;
-import com.cskit.controlplatservice.models.CtrlAccountModel;
+//import com.cskit.controlplatservice.models.CtrlAccountModel;
 import com.cskit.controlplatservice.models.UserInfo;
 import com.cskit.controlplatserviceimpl.config.SwaggerConfig;
-import com.cskit.controlplatserviceimpl.es.CtrlAccountESRepository;
+//import com.cskit.controlplatserviceimpl.es.CtrlAccountESRepository;
 import com.cskit.controlplatserviceimpl.mappers.UserInfoMapper;
 import com.cskit.controlplatserviceimpl.mongo.UserInfoMongoRepository;
-import com.cskit.utils.esutils.EsTemplateService;
+//import com.cskit.utils.esutils.EsTemplateService;
 import com.cskit.utils.exception.BizException;
 import com.cskit.utils.kafkautils.KafkaConsumerClient;
 import com.cskit.utils.kafkautils.KafkaProducerClient;
@@ -26,17 +26,17 @@ import com.cskit.utils.tenant.TenantNotInterceptor;
 import com.github.pagehelper.PageHelper;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiParam;
-import org.elasticsearch.index.query.BoolQueryBuilder;
-import org.elasticsearch.index.query.QueryBuilder;
-import org.elasticsearch.index.query.QueryBuilders;
-import org.elasticsearch.index.query.RangeQueryBuilder;
+//import org.elasticsearch.index.query.BoolQueryBuilder;
+//import org.elasticsearch.index.query.QueryBuilder;
+//import org.elasticsearch.index.query.QueryBuilders;
+//import org.elasticsearch.index.query.RangeQueryBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
-import org.springframework.data.elasticsearch.core.query.SearchQuery;
+//import org.springframework.data.elasticsearch.core.query.SearchQuery;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -61,8 +61,8 @@ public class UserInfoProviderImpl extends BaseController implements UserInfoProv
     @Autowired
     private RedisTemplateServiceImpl<String, UserInfo> redisTemplateService;
 
-    @Autowired
-    private CtrlAccountESRepository ctrlAccountESRepository;
+/*    @Autowired
+    private CtrlAccountESRepository ctrlAccountESRepository;*/
 
     @Autowired
     private KafkaProducerClient<String> kafkaProducerClient;
@@ -181,11 +181,11 @@ public class UserInfoProviderImpl extends BaseController implements UserInfoProv
         return new ResponseData<PageInfo<UserInfo>>("提示消息", pageInfo);
     }
 
-    @Override
+    /*@Override
     public ResponseData<CtrlAccountModel> getAccountFromES(Long ctrlaccountid) {
         CtrlAccountModel ctrlAccountModel = null;
 
-        //  查询组合开始
+      *//*  //  查询组合开始
         BoolQueryBuilder boolQueryBuilder = QueryBuilders.boolQuery();
         QueryBuilder queryBuilder = QueryBuilders.termQuery("position", "企业管理员");
         RangeQueryBuilder rangeQueryBuilder = QueryBuilders.rangeQuery("ctrl_account_id").from(0, true).to(1000, true);
@@ -194,14 +194,14 @@ public class UserInfoProviderImpl extends BaseController implements UserInfoProv
         Iterable<CtrlAccountModel> accountModels = ctrlAccountESRepository.search(boolQueryBuilder);
         //  开发组合结束
 
-        ctrlAccountModel = ctrlAccountESRepository.findById(ctrlaccountid).orElse(new CtrlAccountModel());
+        ctrlAccountModel = ctrlAccountESRepository.findById(ctrlaccountid).orElse(new CtrlAccountModel());*//*
         return new ResponseData<CtrlAccountModel>("提示消息", ctrlAccountModel);
-    }
+    }*/
 
-    @Override
+    /*@Override
     public PageInfo<CtrlAccountModel> getPageAccountFromES(int pagenum, int pagesize) {
         PageInfo<CtrlAccountModel> pageInfo = null;
-        Pageable pageable = PageRequest.of(pagenum, pagesize, Sort.Direction.DESC, "create_date");
+*//*        Pageable pageable = PageRequest.of(pagenum, pagesize, Sort.Direction.DESC, "create_date");
         org.springframework.data.domain.Page<CtrlAccountModel> page = ctrlAccountESRepository.findAll(pageable);
         if (StringUtils.isEmpty(page))
             pageInfo = new PageInfo<>();
@@ -212,9 +212,9 @@ public class UserInfoProviderImpl extends BaseController implements UserInfoProv
             pageInfo.setPageNum(pagenum);
             pageInfo.setPageSize(pagesize);
             pageInfo.setSize(page.getContent().size());
-        }
+        }*//*
         return pageInfo;
-    }
+    }*/
 
     @Override
     public ResponseData<String> kafkaReceive() {
